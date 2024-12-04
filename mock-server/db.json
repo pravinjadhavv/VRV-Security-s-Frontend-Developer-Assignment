@@ -1,0 +1,150 @@
+{
+  "users": [
+    {
+      "id": "374a",
+      "name": "pravin jadhav",
+      "email": "pravin11007@gmail.com",
+      "status": "a",
+      "role": "p"
+    },
+    {
+      "id": "020a",
+      "name": "book",
+      "email": "abcbcb@gmail.com",
+      "status": "er",
+      "role": "sdf"
+    },
+    {
+      "id": "3972",
+      "name": "marathwada mitramandals collage of commerce  ",
+      "email": "abc@gmail.com",
+      "status": "active",
+      "role": "manager"
+    },
+    {
+      "id": "1613",
+      "name": "test",
+      "email": "pravin@gmail.com",
+      "status": "off",
+      "role": "imp"
+    },
+    {
+      "id": "7fe9",
+      "name": "pravin jadhav test",
+      "email": "qwqw@gmail.com",
+      "status": "active ",
+      "role": "employee"
+    },
+    {
+      "id": "35eb",
+      "name": "marathwada mitramandals collage of commerce  ",
+      "email": "pravin11007@gmail.com",
+      "status": "active",
+      "role": "manager"
+    },
+    {
+      "id": "e4dd",
+      "name": "sdds",
+      "email": "sds@gmail.com",
+      "status": "www",
+      "role": "qw"
+    },
+    {
+      "id": "8943",
+      "name": "book",
+      "email": "pravin11007@gmail.com",
+      "status": "off",
+      "role": "employee"
+    },
+    {
+      "id": "c364",
+      "name": "check",
+      "email": "check@gmail.com",
+      "status": "Deactivated",
+      "role": "Manager"
+    },
+    {
+      "id": "f4cf",
+      "name": "pravin ubale ",
+      "email": "pravin1@gmail.com",
+      "status": "Active",
+      "role": "Manager"
+    }
+  ],
+  "roles": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "permissions": [
+        "read",
+        "write",
+        "delete"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Editor",
+      "permissions": [
+        "read",
+        "write"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Viewer",
+      "permissions": [
+        "read"
+      ]
+    },
+    {
+      "id": "1033",
+      "name": "pravin jadhav",
+      "permissions": "read"
+    }
+  ],
+  "permissions": [
+    {
+      "id": "1",
+      "key": "read",
+      "description": "Can read data"
+    },
+    {
+      "id": "2",
+      "key": "write",
+      "description": "Can write data"
+    },
+    {
+      "id": "3",
+      "key": "delete",
+      "description": "Can delete data"
+    },
+    {
+      "id": "1732883694346",
+      "name": "too"
+    },
+    {
+      "id": "1732883716890",
+      "name": "delete"
+    }
+  ],
+  "logs": [
+    {
+      "id": "1",
+      "user": "pravin",
+      "action": "Created a new role",
+      "timestamp": "2024-11-28T10:30:00Z"
+    },
+    {
+      "id": "2",
+      "user": "John Doe",
+      "action": "Assigned role to a user",
+      "timestamp": "2024-11-28T11:00:00Z"
+    },
+    {
+      "id": "3",
+      "user": "Jane Smith",
+      "action": "Updated permissions",
+      "timestamp": "2024-11-28T12:15:00Z"
+    }
+  ]
+}

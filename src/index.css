@@ -1,13 +1,157 @@
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Arial', sans-serif;
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+body.light {
+  background: linear-gradient(135deg, #00feba, #5b548a);
+  color: #000;
+}
+
+
+body.dark {
+  background: linear-gradient(135deg, #333333, #444444);
+  color: #fff;
+}
+
+
+body.shadow {
+  background: linear-gradient(135deg, #d1d0d1, #f0f0f0);
+  color: #000;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: inset 5px 5px 10px #babecc, inset -5px -5px 10px #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: rgba(0, 254, 186, 0.1);
+}
+
+
+button {
+  background-color: var(--button-background);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+
+.theme-toggle {
+  display: flex;
+  gap: 10px;
+}
+
+.theme-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+  color: inherit;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.theme-button:hover {
+  color: #00feba;
+}
+
+
+.content {
+  padding: 2rem;
+}
+
+
+.navbar {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.navbar.light {
+  background: linear-gradient(135deg, #00feba, #5b548a);
+  color: #000;
+}
+
+.navbar.dark {
+  background: linear-gradient(135deg, #333333, #444444);
+  color: #fff;
+}
+
+.navbar.shadow {
+  background: linear-gradient(135deg, #d1d0d1, #f0f0f0);
+  color: #000;
+}
+
+.navbar a {
+  color: inherit;
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #00feba;
+}
+
+
+button {
+  background-color: var(--button-background);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+              -5px -5px 10px rgba(255, 255, 255, 0.7);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  margin: 20px 0;
 }

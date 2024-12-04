@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+
+
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Users from './pages/Users';
+import Roles from './pages/Roles';
+import Permissions from './pages/Permissions';
+import Logs from './pages/Logs';
+import { lightTheme, darkTheme, shadowTheme } from "./theme";
 
 function App() {
+  const [currentTheme, setCurrentTheme] = useState(() => {
+    return localStorage.getItem("theme") || "light";
+  });
+
+  const themeStyles = () => {
+    if (currentTheme === "light") return lightTheme;
+    if (currentTheme === "dark") return darkTheme;
+    return shadowTheme;
+  };
+
+  useEffect(() => {
+    document.body.className = ''; 
+    document.body.classList.add(currentTheme);
+    localStorage.setItem("theme", currentTheme);
+  }, [currentTheme]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar setTheme={setCurrentTheme} currentTheme={currentTheme} />
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<Users />} />
+          <Route path="/roles" element={<Roles />} />
+          <Route path="/permissions" element={<Permissions />} />
+          <Route path="/logs" element={<Logs />} />
+        </Routes>
+      </div>
+      <Footer />
+    </Router>
   );
 }
 
